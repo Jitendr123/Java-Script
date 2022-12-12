@@ -1,0 +1,30 @@
+var number=Number(prompt(`Enter a number you want to know that given number is a armstrong or not :`))
+var totalDigit=0;
+var n=number 
+//total number of digit present in the given number
+while(n!=0){
+    n=parseInt(n/10)
+    totalDigit++  
+}
+n=number
+var rem=0
+var sum=0
+//finding last digit of the given number
+while(n!=0){
+    rem=n%10
+    var p=1
+//finding rem^totalDigit
+    for(let i=0;i<totalDigit;i++){
+        p=p*rem 
+    }
+//summing all powered digit
+    sum=sum+p
+    n=parseInt(n/10)
+}
+//checking final number is equal to given number 
+if(sum==number){
+    document.write(`${number} is a armstrong number.`)
+}
+else{
+    document.write(`${number} is not a armstrong number.`)
+}
