@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+    }
+    .main{
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        place-items: center;
+    }
+    .center{
+        height: 70%;
+        width: 70%;
+        align-items: center;
+    }
+    p{
+        background-color: rgb(249, 69, 186);
+        color: white;
+        padding: 10px;
+        text-align: justify;
+    }
+    button{
+        background-color: rgb(147, 147, 222);
+        color: white;
+        border: none;
+        margin-bottom: 5px;
+        margin-left:40% ;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="center">
+             <button onclick="fun()" onmouseout="normal()">Change/Reset</button>
+             <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quaerat id reprehenderit impedit facere facilis, nobis maxime blanditiis, libero doloribus rem aperiam ea distinctio quia possimus accusamus numquam deserunt vel dignissimos eius fugit iure esse? Laboriosam tenetur distinctio sit blanditiis quia cumque fugiat unde dolorum? Iusto facere nobis delectus ea.</p>
+        </div>
+    </div>
+    <script>
+        var text1="erstdfgvbhuiyutrxcfvghbuiytrdxcvbhkjnuiytdfcvbnkiuytdx"
+        var text2="esdfghugjhbjnxdcfvbgnhjmksdxcfvgbhjcyguhjkefyghjkzxdcfvgbhnjm"
+        var text3="Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quaerat id reprehenderit impedit facere facilis, nobis maxime blanditiis, libero doloribus rem aperiam ea distinctio quia possimus accusamus numquam deserunt vel dignissimos eius fugit iure esse? Laboriosam tenetur distinctio sit blanditiis quia cumque fugiat unde dolorum? Iusto facere nobis delectus ea."
+        var ch=2
+        var p=document.getElementById("para")
+        function fun(){
+            if(ch==1){
+                p.innerHTML=text1
+                p.style.backgroundColor="pink"
+                ch=2
+            }
+            else{
+                p.innerHTML=text2
+                p.style.backgroundColor="purple"
+                ch=1
+            }
+        }
+        function normal(){
+            p.innerHTML=text3
+        }
+    </script>
+</body>
+</html>
